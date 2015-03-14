@@ -10,6 +10,7 @@ int main()
 	system("cat /sys/class/gpio/gpio27/value");
 	
 	while(true){
+		printf("Enter 1 to turn on GPIO27(D1 LED), enter 0 to turn off GPIO27(D1 LED), anything else to quit: ");
 		scanf("%s", str);
 		if(strcmp(str, "1") == 0){
 			system("echo 1 > /sys/class/gpio/gpio27/value");
