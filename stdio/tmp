@@ -1,0 +1,97 @@
+execve("./a.out", ["./a.out", "README"], [/* 22 vars */]) = 0
+brk(0)                                  = 0x8a9c000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77b8000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/sse2/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/sse2", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/i686", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/sse2/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/sse2", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/tls", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/sse2/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/sse2", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/i686", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/sse2/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/sse2", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib/cmov", 0xbf8cd2f0) = -1 ENOENT (No such file or directory)
+open("/home/amigok/rpi/code/embedded_class/demo_make/lib/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+stat64("/home/amigok/rpi/code/embedded_class/demo_make/lib", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+open("tls/i686/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/i686/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/i686/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/i686/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("tls/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("i686/sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("i686/sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("i686/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("i686/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("sse2/cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("sse2/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("cmov/libc.so.6", O_RDONLY|O_CLOEXEC) = -1 ENOENT (No such file or directory)
+open("libc.so.6", O_RDONLY|O_CLOEXEC)   = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb77b2000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7604000
+mmap2(0xb77ac000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb77ac000
+mmap2(0xb77af000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb77af000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7603000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb7603940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb77ac000, 8192, PROT_READ)   = 0
+mprotect(0x8049000, 4096, PROT_READ)    = 0
+mprotect(0xb77dd000, 4096, PROT_READ)   = 0
+munmap(0xb77b2000, 20494)               = 0
+brk(0)                                  = 0x8a9c000
+brk(0x8abd000)                          = 0x8abd000
+open("README", O_RDONLY)                = 3
+fstat64(3, {st_mode=S_IFREG|0664, st_size=160, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77b7000
+read(3, "1. fopen.c: test fopen, fgets fo"..., 4096) = 160
+fstat64(1, {st_mode=S_IFREG|0664, st_size=7588, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77b6000
+read(3, "", 4096)                       = 0
+close(3)                                = 0
+munmap(0xb77b7000, 4096)                = 0
+write(1, "[1. fopen.c: test fopen, fgets f"..., 178[1. fopen.c: test fopen, fgets for read stream.
+]
+[2. fputs.c: demo write stream
+]
+[	fopen() fputs(), 
+]
+[	fgets().stdin, stdout.
+]
+[	./a.out   >out
+]
+[	./a.out 2>out //stderr
+]
+) = 178
+exit_group(0)                           = ?
++++ exited with 0 +++

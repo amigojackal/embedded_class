@@ -1,0 +1,6 @@
+1. fopen.c: test fopen, fgets for read stream.
+2. fputs.c: demo write stream
+	fopen() fputs(), 
+	fgets().stdin, stdout.
+	./a.out   >out
+	./a.out 2>out //stderr
