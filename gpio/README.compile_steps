@@ -1,0 +1,12 @@
+Pre-Processing
+g++ -E gpio.c gpio.i
+
+Compiling (to assembly)
+g++ -S gpio.c -o gpio.s
+
+Assembling
+g++ -c gpio.c -o gpio.o
+
+Linking
+g++ gpio.o -o gpio.exe
+
