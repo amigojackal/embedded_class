@@ -1,0 +1,26 @@
+Programming KDE using Qt
+
+Makefile - a makefile for building the sample programs. You may need to change
+the definition of the QTDIR macro to reflect your Qt installation path
+
+qt1 - simple qt application that creates a window
+
+LayoutWindow - An example of using layout objects in Qt
+
+ButtonWindow - Signals and Slots example using a QPushButton widget
+
+Buttons - An example showing QButton widgets in action
+
+LineEdit - Inputting text with Qt
+
+ComboBox - Selecting an item from a list 
+
+ListView - Example of the Qt list and tree widget
+
+/KDE
+
+Menus - KDE Menu and toolbar example
+
+CDApp - CD Database front end using KDE
+
+  

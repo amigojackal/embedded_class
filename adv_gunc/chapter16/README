@@ -1,0 +1,48 @@
+Programming Gnome using Gtk+
+
+SuSE8.2 does not install GNOME development files by default.
+To compile the examples and CD app you will need to install the packages below
+that are not installed even with a "full install": 
+glib2-devel
+pango-devel
+atk-devel
+gnome-libs-devel (this will pull in additional RPMs)
+libgnome-devel
+libgnomeui-devel
+orbit2-devel
+linc-devel
+libbonobo-devel
+bonobo-activation-devel
+gconf2-devel
+gnome-vfs2-devel
+libgnomecanvas-devel
+libbonoboui-devel
+
+gtk1.c  - the simplest gtk+ program that displays a window
+
+gtk2.c  - a window with a button and callback function
+
+container.c - a demonstration of using container widgets to layout label widgets
+
+entry.c - username/password entry widgets
+
+buttons.c - using different gtk+ button widgets
+
+spinbutton.c - inputting a number using a spinbutton widget
+
+list.c - displaying a list
+
+tree.c - displaying a tree
+
+menu1.c, menu2.c - menus and toolbars using gnome
+
+
+
+CD Application.
+
+This is a Gnome/Gtk+ GUI implementation for the cd application.  
+
+N.B. RedHat 8 users may need to add -L/usr/lib/mysql to the compilation options. See
+     Makefile in chapter16/app. 
+
+
