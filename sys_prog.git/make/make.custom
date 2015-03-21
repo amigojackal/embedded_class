@@ -1,0 +1,9 @@
+define dep1
+	@echo "Hello i am $(0), $(1)"
+endef
+
+dep2 = ls -l
+all:
+	@echo $@
+	$(call dep1, "arg1")
+	$(call dep2, "arg1")

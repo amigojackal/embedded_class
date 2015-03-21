@@ -1,0 +1,9 @@
+define func
+$1:
+	@echo "at foo $2"
+endef
+
+all: foo
+	@echo "final"
+
+$(eval $(call func, foo,abc.c))
