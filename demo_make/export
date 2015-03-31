@@ -1,0 +1,1 @@
+export LD_LIBRARY_PATH=/home/amigok/rpi/code/embedded_class/demo_make/lib:$LD_LIBRARY_PATH

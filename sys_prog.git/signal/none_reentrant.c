@@ -24,10 +24,13 @@ int main(void)
     signal(SIGALRM, my_alarm);
     alarm(1);
     for (;;) {
-	if ((ptr = getpwnam("peter")) == NULL)
+	if ((ptr = getpwnam("amigok")) == NULL)
 	    perror("getpwnam error");
-	if (strcmp(ptr->pw_name, "peter") != 0)
+	if (strcmp(ptr->pw_name, "amigok") != 0){
 	    printf("return value corrupted!, pw_name = %s\n",
 		   ptr->pw_name);
+        }else{
+            printf(".");
+        }
     }
 }

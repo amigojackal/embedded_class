@@ -1,0 +1,639 @@
+execve("./popen1", ["./popen1"], [/* 21 vars */]) = 0
+brk(0)                                  = 0x92db000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76f2000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb76ec000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb753e000
+mmap2(0xb76e6000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb76e6000
+mmap2(0xb76e9000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb76e9000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb753d000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb753d940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb76e6000, 8192, PROT_READ)   = 0
+mprotect(0x8049000, 4096, PROT_READ)    = 0
+mprotect(0xb7717000, 4096, PROT_READ)   = 0
+munmap(0xb76ec000, 20494)               = 0
+brk(0)                                  = 0x92db000
+brk(0x92fc000)                          = 0x92fc000
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(Process 3128 attached
+child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb753d9a8) = 3128
+[pid  3128] close(3 <unfinished ...>
+[pid  3127] close(4 <unfinished ...>
+[pid  3128] <... close resumed> )       = 0
+[pid  3127] <... close resumed> )       = 0
+[pid  3128] dup2(4, 1 <unfinished ...>
+[pid  3127] fcntl64(3, F_SETFD, 0 <unfinished ...>
+[pid  3128] <... dup2 resumed> )        = 1
+[pid  3127] <... fcntl64 resumed> )     = 0
+[pid  3128] close(4 <unfinished ...>
+[pid  3127] fstat64(3,  <unfinished ...>
+[pid  3128] <... close resumed> )       = 0
+[pid  3127] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3128] execve("/bin/sh", ["sh", "-c", "ifconfig  eth0|grep Mask|cut -d "...], [/* 21 vars */] <unfinished ...>
+[pid  3127] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb76f1000
+[pid  3128] <... execve resumed> )      = 0
+[pid  3127] read(3,  <unfinished ...>
+[pid  3128] brk(0)                      = 0xb9218000
+[pid  3128] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3128] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77a3000
+[pid  3128] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid  3128] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid  3128] fstat64(3, {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3128] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb779d000
+[pid  3128] close(3)                    = 0
+[pid  3128] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3128] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid  3128] read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3128] fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3128] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75ef000
+[pid  3128] mmap2(0xb7797000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb7797000
+[pid  3128] mmap2(0xb779a000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb779a000
+[pid  3128] close(3)                    = 0
+[pid  3128] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75ee000
+[pid  3128] set_thread_area({entry_number:-1 -> 6, base_addr:0xb75ee940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3128] mprotect(0xb7797000, 8192, PROT_READ) = 0
+[pid  3128] mprotect(0xb77e5000, 4096, PROT_READ) = 0
+[pid  3128] mprotect(0xb77c8000, 4096, PROT_READ) = 0
+[pid  3128] munmap(0xb779d000, 20494)   = 0
+[pid  3128] getpid()                    = 3128
+[pid  3128] rt_sigaction(SIGCHLD, {0xb77daca0, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3128] geteuid32()                 = 1000
+[pid  3128] brk(0)                      = 0xb9218000
+[pid  3128] brk(0xb9239000)             = 0xb9239000
+[pid  3128] getppid()                   = 3127
+[pid  3128] stat64("/home/amigok/rpi/code/embedded_class/sys_prog.git/pipe", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid  3128] stat64(".", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid  3128] rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+[pid  3128] rt_sigaction(SIGINT, {0xb77daca0, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3128] rt_sigaction(SIGQUIT, NULL, {SIG_DFL, [], 0}, 8) = 0
+[pid  3128] rt_sigaction(SIGQUIT, {SIG_DFL, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3128] rt_sigaction(SIGTERM, NULL, {SIG_DFL, [], 0}, 8) = 0
+[pid  3128] rt_sigaction(SIGTERM, {SIG_DFL, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3128] stat64("/usr/local/sbin/ifconfig", 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3128] stat64("/usr/local/bin/ifconfig", 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3128] stat64("/usr/sbin/ifconfig", 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3128] stat64("/usr/bin/ifconfig", 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3128] stat64("/sbin/ifconfig", {st_mode=S_IFREG|0755, st_size=69484, ...}) = 0
+[pid  3128] pipe([3, 4])                = 0
+[pid  3128] clone(Process 3129 attached
+child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75ee9a8) = 3129
+[pid  3129] close(3 <unfinished ...>
+[pid  3128] close(4 <unfinished ...>
+[pid  3129] <... close resumed> )       = 0
+[pid  3128] <... close resumed> )       = 0
+[pid  3129] dup2(4, 1 <unfinished ...>
+[pid  3128] stat64("/usr/local/sbin/grep",  <unfinished ...>
+[pid  3129] <... dup2 resumed> )        = 1
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3129] close(4 <unfinished ...>
+[pid  3128] stat64("/usr/local/bin/grep",  <unfinished ...>
+[pid  3129] <... close resumed> )       = 0
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3129] execve("/sbin/ifconfig", ["ifconfig", "eth0"], [/* 21 vars */] <unfinished ...>
+[pid  3128] stat64("/usr/sbin/grep", 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3129] <... execve resumed> )      = 0
+[pid  3128] stat64("/usr/bin/grep",  <unfinished ...>
+[pid  3129] brk(0 <unfinished ...>
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3129] <... brk resumed> )         = 0x9d4d000
+[pid  3128] stat64("/sbin/grep",  <unfinished ...>
+[pid  3129] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3128] stat64("/bin/grep",  <unfinished ...>
+[pid  3129] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3128] <... stat64 resumed> {st_mode=S_IFREG|0755, st_size=178216, ...}) = 0
+[pid  3129] <... mmap2 resumed> )       = 0xb7720000
+[pid  3128] pipe( <unfinished ...>
+[pid  3129] access("/etc/ld.so.preload", R_OK <unfinished ...>
+[pid  3128] <... pipe resumed> [4, 5])  = 0
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3128] clone( <unfinished ...>
+[pid  3129] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXECProcess 3130 attached
+) = 3
+[pid  3129] fstat64(3,  <unfinished ...>
+[pid  3128] <... clone resumed> child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75ee9a8) = 3130
+[pid  3130] close(4 <unfinished ...>
+[pid  3128] close(3 <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3128] <... close resumed> )       = 0
+[pid  3130] dup2(3, 0 <unfinished ...>
+[pid  3128] close(5 <unfinished ...>
+[pid  3130] <... dup2 resumed> )        = 0
+[pid  3128] <... close resumed> )       = 0
+[pid  3130] close(3 <unfinished ...>
+[pid  3128] stat64("/usr/local/sbin/cut",  <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3130] dup2(5, 1 <unfinished ...>
+[pid  3128] stat64("/usr/local/bin/cut",  <unfinished ...>
+[pid  3130] <... dup2 resumed> )        = 1
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3130] close(5 <unfinished ...>
+[pid  3128] stat64("/usr/sbin/cut",  <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3128] <... stat64 resumed> 0xbfd00410) = -1 ENOENT (No such file or directory)
+[pid  3129] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3130] execve("/bin/grep", ["grep", "Mask"], [/* 21 vars */] <unfinished ...>
+[pid  3128] stat64("/usr/bin/cut",  <unfinished ...>
+[pid  3129] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb771a000
+[pid  3129] close(3)                    = 0
+[pid  3129] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3130] <... execve resumed> )      = 0
+[pid  3129] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3130] brk(0 <unfinished ...>
+[pid  3129] <... open resumed> )        = 3
+[pid  3130] <... brk resumed> )         = 0x937d000
+[pid  3129] read(3,  <unfinished ...>
+[pid  3128] <... stat64 resumed> {st_mode=S_IFREG|0755, st_size=38628, ...}) = 0
+[pid  3130] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3129] <... read resumed> "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3130] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3129] fstat64(3,  <unfinished ...>
+[pid  3130] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3129] <... fstat64 resumed> {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3130] <... mmap2 resumed> )       = 0xb7723000
+[pid  3129] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+[pid  3130] access("/etc/ld.so.preload", R_OK <unfinished ...>
+[pid  3129] <... mmap2 resumed> )       = 0xb756c000
+[pid  3130] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3129] mmap2(0xb7714000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000 <unfinished ...>
+[pid  3130] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3129] <... mmap2 resumed> )       = 0xb7714000
+[pid  3130] <... open resumed> )        = 3
+[pid  3129] mmap2(0xb7717000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3129] <... mmap2 resumed> )       = 0xb7717000
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3129] close(3 <unfinished ...>
+[pid  3130] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3129] <... close resumed> )       = 0
+[pid  3130] <... mmap2 resumed> )       = 0xb771d000
+[pid  3128] pipe( <unfinished ...>
+[pid  3130] close(3 <unfinished ...>
+[pid  3129] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3129] <... mmap2 resumed> )       = 0xb756b000
+[pid  3130] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3129] set_thread_area({entry_number:-1 ->  <unfinished ...>
+[pid  3130] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3129] <... set_thread_area resumed> 6, base_addr:0xb756b940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3130] open("/lib/i386-linux-gnu/libpcre.so.3", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3128] <... pipe resumed> [3, 5])  = 0
+[pid  3129] mprotect(0xb7714000, 8192, PROT_READ <unfinished ...>
+[pid  3130] <... open resumed> )        = 3
+[pid  3129] <... mprotect resumed> )    = 0
+[pid  3130] read(3,  <unfinished ...>
+[pid  3129] mprotect(0x8058000, 4096, PROT_READ <unfinished ...>
+[pid  3130] <... read resumed> "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\200\20\0\0004\0\0\0"..., 512) = 512
+[pid  3129] <... mprotect resumed> )    = 0
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3129] mprotect(0xb7745000, 4096, PROT_READ <unfinished ...>
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=247196, ...}) = 0
+[pid  3129] <... mprotect resumed> )    = 0
+[pid  3130] mmap2(NULL, 249952, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+[pid  3129] munmap(0xb771a000, 20494 <unfinished ...>
+[pid  3130] <... mmap2 resumed> )       = 0xb76df000
+[pid  3129] <... munmap resumed> )      = 0
+[pid  3130] mmap2(0xb771b000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x3b000 <unfinished ...>
+[pid  3128] clone( <unfinished ...>
+[pid  3129] brk(0Process 3131 attached
+ <unfinished ...>
+[pid  3130] <... mmap2 resumed> )       = 0xb771b000
+[pid  3129] <... brk resumed> )         = 0x9d4d000
+[pid  3130] close(3 <unfinished ...>
+[pid  3131] close(3 <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3131] <... close resumed> )       = 0
+[pid  3130] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3131] dup2(4, 0 <unfinished ...>
+[pid  3130] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3131] <... dup2 resumed> )        = 0
+[pid  3130] open("/lib/i386-linux-gnu/libdl.so.2", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3131] close(4 <unfinished ...>
+[pid  3130] <... open resumed> )        = 3
+[pid  3131] <... close resumed> )       = 0
+[pid  3130] read(3,  <unfinished ...>
+[pid  3131] dup2(5, 1 <unfinished ...>
+[pid  3130] <... read resumed> "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\320\n\0\0004\0\0\0"..., 512) = 512
+[pid  3131] <... dup2 resumed> )        = 1
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3131] close(5 <unfinished ...>
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=13856, ...}) = 0
+[pid  3131] <... close resumed> )       = 0
+[pid  3130] mmap2(NULL, 16512, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+[pid  3129] brk(0x9d6e000 <unfinished ...>
+[pid  3128] <... clone resumed> child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75ee9a8) = 3131
+[pid  3131] execve("/usr/bin/cut", ["cut", "-d", ":", "-f", "2"], [/* 21 vars */] <unfinished ...>
+[pid  3130] <... mmap2 resumed> )       = 0xb76da000
+[pid  3129] <... brk resumed> )         = 0x9d6e000
+[pid  3128] close(4 <unfinished ...>
+[pid  3129] open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC <unfinished ...>
+[pid  3128] <... close resumed> )       = 0
+[pid  3130] mmap2(0xb76dd000, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x2000 <unfinished ...>
+[pid  3131] <... execve resumed> )      = 0
+[pid  3130] <... mmap2 resumed> )       = 0xb76dd000
+[pid  3129] <... open resumed> )        = 3
+[pid  3131] brk(0 <unfinished ...>
+[pid  3130] close(3 <unfinished ...>
+[pid  3131] <... brk resumed> )         = 0x8064000
+[pid  3130] <... close resumed> )       = 0
+[pid  3128] close(5 <unfinished ...>
+[pid  3131] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3130] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3131] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3130] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3131] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3130] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3131] <... mmap2 resumed> )       = 0xb772d000
+[pid  3130] <... open resumed> )        = 3
+[pid  3131] access("/etc/ld.so.preload", R_OK <unfinished ...>
+[pid  3130] read(3,  <unfinished ...>
+[pid  3131] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3130] <... read resumed> "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3131] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3131] <... open resumed> )        = 3
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3131] fstat64(3,  <unfinished ...>
+[pid  3130] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3131] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3130] <... mmap2 resumed> )       = 0xb76d9000
+[pid  3131] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3130] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+[pid  3131] <... mmap2 resumed> )       = 0xb7727000
+[pid  3130] <... mmap2 resumed> )       = 0xb752b000
+[pid  3131] close(3 <unfinished ...>
+[pid  3130] mmap2(0xb76d3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000 <unfinished ...>
+[pid  3131] <... close resumed> )       = 0
+[pid  3130] <... mmap2 resumed> )       = 0xb76d3000
+[pid  3131] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3130] mmap2(0xb76d6000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3131] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3130] <... mmap2 resumed> )       = 0xb76d6000
+[pid  3131] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3130] close(3 <unfinished ...>
+[pid  3131] <... open resumed> )        = 3
+[pid  3130] <... close resumed> )       = 0
+[pid  3131] read(3,  <unfinished ...>
+[pid  3129] fstat64(3,  <unfinished ...>
+[pid  3131] <... read resumed> "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3130] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3131] fstat64(3,  <unfinished ...>
+[pid  3130] <... mmap2 resumed> )       = 0xb752a000
+[pid  3131] <... fstat64 resumed> {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3130] set_thread_area({entry_number:-1 ->  <unfinished ...>
+[pid  3131] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+[pid  3130] <... set_thread_area resumed> 6, base_addr:0xb752a700, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3131] <... mmap2 resumed> )       = 0xb7579000
+[pid  3129] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=1607664, ...}) = 0
+[pid  3128] <... close resumed> )       = 0
+[pid  3128] clone( <unfinished ...>
+[pid  3131] mmap2(0xb7721000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000Process 3132 attached
+) = 0xb7721000
+[pid  3130] mprotect(0xb76d3000, 8192, PROT_READ <unfinished ...>
+[pid  3131] mmap2(0xb7724000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3130] <... mprotect resumed> )    = 0
+[pid  3131] <... mmap2 resumed> )       = 0xb7724000
+[pid  3130] mprotect(0xb76dd000, 4096, PROT_READ <unfinished ...>
+[pid  3131] close(3 <unfinished ...>
+[pid  3130] <... mprotect resumed> )    = 0
+[pid  3132] dup2(3, 0 <unfinished ...>
+[pid  3131] <... close resumed> )       = 0
+[pid  3132] <... dup2 resumed> )        = 0
+[pid  3130] mprotect(0xb771b000, 4096, PROT_READ <unfinished ...>
+[pid  3132] close(3 <unfinished ...>
+[pid  3131] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3132] <... close resumed> )       = 0
+[pid  3131] <... mmap2 resumed> )       = 0xb7578000
+[pid  3130] <... mprotect resumed> )    = 0
+[pid  3131] set_thread_area({entry_number:-1 ->  <unfinished ...>
+[pid  3130] mprotect(0x8073000, 4096, PROT_READ <unfinished ...>
+[pid  3131] <... set_thread_area resumed> 6, base_addr:0xb7578940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3132] execve("/usr/bin/cut", ["cut", "-d", " ", "-f", "1"], [/* 21 vars */] <unfinished ...>
+[pid  3131] mprotect(0xb7721000, 8192, PROT_READ <unfinished ...>
+[pid  3130] <... mprotect resumed> )    = 0
+[pid  3131] <... mprotect resumed> )    = 0
+[pid  3130] mprotect(0xb7748000, 4096, PROT_READ <unfinished ...>
+[pid  3131] mprotect(0x8051000, 4096, PROT_READ <unfinished ...>
+[pid  3130] <... mprotect resumed> )    = 0
+[pid  3131] <... mprotect resumed> )    = 0
+[pid  3130] munmap(0xb771d000, 20494 <unfinished ...>
+[pid  3131] mprotect(0xb7752000, 4096, PROT_READ <unfinished ...>
+[pid  3130] <... munmap resumed> )      = 0
+[pid  3131] <... mprotect resumed> )    = 0
+[pid  3129] mmap2(NULL, 1607664, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3132] <... execve resumed> )      = 0
+[pid  3131] munmap(0xb7727000, 20494 <unfinished ...>
+[pid  3130] brk(0 <unfinished ...>
+[pid  3132] brk(0 <unfinished ...>
+[pid  3131] <... munmap resumed> )      = 0
+[pid  3132] <... brk resumed> )         = 0x8cf2000
+[pid  3130] <... brk resumed> )         = 0x937d000
+[pid  3129] <... mmap2 resumed> )       = 0xb73e2000
+[pid  3128] <... clone resumed> child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75ee9a8) = 3132
+[pid  3128] close(3)                    = 0
+[pid  3131] brk(0 <unfinished ...>
+[pid  3130] brk(0x939e000 <unfinished ...>
+[pid  3132] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3131] <... brk resumed> )         = 0x8064000
+[pid  3132] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3131] brk(0x8085000 <unfinished ...>
+[pid  3132] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3131] <... brk resumed> )         = 0x8085000
+[pid  3132] <... mmap2 resumed> )       = 0xb76ef000
+[pid  3131] open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC <unfinished ...>
+[pid  3132] access("/etc/ld.so.preload", R_OK <unfinished ...>
+[pid  3131] <... open resumed> )        = 3
+[pid  3132] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3131] fstat64(3,  <unfinished ...>
+[pid  3132] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3131] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=1607664, ...}) = 0
+[pid  3132] <... open resumed> )        = 3
+[pid  3131] mmap2(NULL, 1607664, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3132] fstat64(3,  <unfinished ...>
+[pid  3131] <... mmap2 resumed> )       = 0xb73ef000
+[pid  3132] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3131] close(3 <unfinished ...>
+[pid  3132] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3131] <... close resumed> )       = 0
+[pid  3132] <... mmap2 resumed> )       = 0xb76e9000
+[pid  3130] <... brk resumed> )         = 0x939e000
+[pid  3129] close(3 <unfinished ...>
+[pid  3128] close(-1 <unfinished ...>
+[pid  3130] open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC <unfinished ...>
+[pid  3129] <... close resumed> )       = 0
+[pid  3128] <... close resumed> )       = -1 EBADF (Bad file descriptor)
+[pid  3128] wait4(-1,  <unfinished ...>
+[pid  3129] uname( <unfinished ...>
+[pid  3132] close(3 <unfinished ...>
+[pid  3131] fadvise64_64(0, 0, 0, POSIX_FADV_SEQUENTIAL <unfinished ...>
+[pid  3132] <... close resumed> )       = 0
+[pid  3131] <... fadvise64_64 resumed> ) = -1 ESPIPE (Illegal seek)
+[pid  3132] access("/etc/ld.so.nohwcap", F_OK <unfinished ...>
+[pid  3131] fstat64(0,  <unfinished ...>
+[pid  3132] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3131] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3132] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3131] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3132] <... open resumed> )        = 3
+[pid  3131] <... mmap2 resumed> )       = 0xb772c000
+[pid  3132] read(3,  <unfinished ...>
+[pid  3131] read(0,  <unfinished ...>
+[pid  3132] <... read resumed> "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3130] <... open resumed> )        = 3
+[pid  3132] fstat64(3,  <unfinished ...>
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3132] <... fstat64 resumed> {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=1607664, ...}) = 0
+[pid  3132] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0 <unfinished ...>
+[pid  3130] mmap2(NULL, 1607664, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3132] <... mmap2 resumed> )       = 0xb753b000
+[pid  3130] <... mmap2 resumed> )       = 0xb73a1000
+[pid  3132] mmap2(0xb76e3000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000 <unfinished ...>
+[pid  3130] close(3 <unfinished ...>
+[pid  3132] <... mmap2 resumed> )       = 0xb76e3000
+[pid  3130] <... close resumed> )       = 0
+[pid  3132] mmap2(0xb76e6000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3129] <... uname resumed> {sys="Linux", node="ubuntu-server1404-amigok", ...}) = 0
+[pid  3130] fstat64(1,  <unfinished ...>
+[pid  3129] access("/proc/net", R_OK <unfinished ...>
+[pid  3132] <... mmap2 resumed> )       = 0xb76e6000
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3129] <... access resumed> )      = 0
+[pid  3130] open("/usr/lib/i386-linux-gnu/gconv/gconv-modules.cache", O_RDONLY <unfinished ...>
+[pid  3132] close(3 <unfinished ...>
+[pid  3130] <... open resumed> )        = 3
+[pid  3132] <... close resumed> )       = 0
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3129] access("/proc/net/unix", R_OK <unfinished ...>
+[pid  3132] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=26256, ...}) = 0
+[pid  3132] <... mmap2 resumed> )       = 0xb753a000
+[pid  3130] mmap2(NULL, 26256, PROT_READ, MAP_SHARED, 3, 0 <unfinished ...>
+[pid  3132] set_thread_area({entry_number:-1 ->  <unfinished ...>
+[pid  3130] <... mmap2 resumed> )       = 0xb739a000
+[pid  3132] <... set_thread_area resumed> 6, base_addr:0xb753a940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3130] close(3 <unfinished ...>
+[pid  3129] <... access resumed> )      = 0
+[pid  3130] <... close resumed> )       = 0
+[pid  3129] socket(PF_LOCAL, SOCK_DGRAM, 0 <unfinished ...>
+[pid  3130] ioctl(1, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS <unfinished ...>
+[pid  3129] <... socket resumed> )      = 3
+[pid  3130] <... ioctl resumed> , 0xbffde208) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  3132] mprotect(0xb76e3000, 8192, PROT_READ <unfinished ...>
+[pid  3129] socket(PF_INET, SOCK_DGRAM, IPPROTO_IP <unfinished ...>
+[pid  3132] <... mprotect resumed> )    = 0
+[pid  3130] open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC <unfinished ...>
+[pid  3132] mprotect(0x8051000, 4096, PROT_READ <unfinished ...>
+[pid  3130] <... open resumed> )        = 3
+[pid  3132] <... mprotect resumed> )    = 0
+[pid  3130] fstat64(3,  <unfinished ...>
+[pid  3132] mprotect(0xb7714000, 4096, PROT_READ <unfinished ...>
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=2570, ...}) = 0
+[pid  3132] <... mprotect resumed> )    = 0
+[pid  3130] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3132] munmap(0xb76e9000, 20494 <unfinished ...>
+[pid  3130] <... mmap2 resumed> )       = 0xb7722000
+[pid  3132] <... munmap resumed> )      = 0
+[pid  3130] read(3,  <unfinished ...>
+[pid  3129] <... socket resumed> )      = 4
+[pid  3130] <... read resumed> "# Locale name alias data base.\n#"..., 4096) = 2570
+[pid  3129] access("/proc/net/if_inet6", R_OK <unfinished ...>
+[pid  3130] read(3,  <unfinished ...>
+[pid  3129] <... access resumed> )      = 0
+[pid  3130] <... read resumed> "", 4096) = 0
+[pid  3129] socket(PF_INET6, SOCK_DGRAM, IPPROTO_IP <unfinished ...>
+[pid  3130] close(3 <unfinished ...>
+[pid  3129] <... socket resumed> )      = 5
+[pid  3130] <... close resumed> )       = 0
+[pid  3129] access("/proc/net/ax25", R_OK <unfinished ...>
+[pid  3132] brk(0 <unfinished ...>
+[pid  3130] munmap(0xb7722000, 4096 <unfinished ...>
+[pid  3132] <... brk resumed> )         = 0x8cf2000
+[pid  3130] <... munmap resumed> )      = 0
+[pid  3132] brk(0x8d13000 <unfinished ...>
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3132] <... brk resumed> )         = 0x8d13000
+[pid  3130] open("/usr/share/locale/en_US/LC_MESSAGES/grep.mo", O_RDONLY <unfinished ...>
+[pid  3132] open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC <unfinished ...>
+[pid  3130] <... open resumed> )        = -1 ENOENT (No such file or directory)
+[pid  3132] <... open resumed> )        = 3
+[pid  3130] open("/usr/share/locale/en/LC_MESSAGES/grep.mo", O_RDONLY <unfinished ...>
+[pid  3132] fstat64(3,  <unfinished ...>
+[pid  3130] <... open resumed> )        = -1 ENOENT (No such file or directory)
+[pid  3132] <... fstat64 resumed> {st_mode=S_IFREG|0644, st_size=1607664, ...}) = 0
+[pid  3130] open("/usr/share/locale-langpack/en_US/LC_MESSAGES/grep.mo", O_RDONLY <unfinished ...>
+[pid  3132] mmap2(NULL, 1607664, PROT_READ, MAP_PRIVATE, 3, 0 <unfinished ...>
+[pid  3130] <... open resumed> )        = -1 ENOENT (No such file or directory)
+[pid  3132] <... mmap2 resumed> )       = 0xb73b1000
+[pid  3130] open("/usr/share/locale-langpack/en/LC_MESSAGES/grep.mo", O_RDONLY <unfinished ...>
+[pid  3132] close(3 <unfinished ...>
+[pid  3130] <... open resumed> )        = -1 ENOENT (No such file or directory)
+[pid  3132] <... close resumed> )       = 0
+[pid  3130] fstat64(0,  <unfinished ...>
+[pid  3129] access("/proc/net/nr", R_OK <unfinished ...>
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3130] ioctl(0, SNDCTL_TMR_TIMEBASE or SNDRV_TIMER_IOCTL_NEXT_DEVICE or TCGETS <unfinished ...>
+[pid  3129] access("/proc/net/rose", R_OK <unfinished ...>
+[pid  3132] fadvise64_64(0, 0, 0, POSIX_FADV_SEQUENTIAL <unfinished ...>
+[pid  3130] <... ioctl resumed> , 0xbffde0d8) = -1 ENOTTY (Inappropriate ioctl for device)
+[pid  3132] <... fadvise64_64 resumed> ) = -1 ESPIPE (Illegal seek)
+[pid  3130] read(0,  <unfinished ...>
+[pid  3132] fstat64(0,  <unfinished ...>
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3132] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3129] access("/proc/net/ipx", R_OK <unfinished ...>
+[pid  3132] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3132] <... mmap2 resumed> )       = 0xb76ee000
+[pid  3129] access("/proc/net/appletalk", R_OK <unfinished ...>
+[pid  3132] read(0,  <unfinished ...>
+[pid  3129] <... access resumed> )      = -1 ENOENT (No such file or directory)
+[pid  3129] access("/proc/sys/net/econet", R_OK) = -1 ENOENT (No such file or directory)
+[pid  3129] access("/proc/sys/net/ash", R_OK) = -1 ENOENT (No such file or directory)
+[pid  3129] access("/proc/net/x25", R_OK) = -1 ENOENT (No such file or directory)
+[pid  3129] open("/proc/net/dev", O_RDONLY) = 6
+[pid  3129] fstat64(6, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid  3129] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb771f000
+[pid  3129] read(6, "Inter-|   Receive               "..., 1024) = 446
+[pid  3129] close(6)                    = 0
+[pid  3129] munmap(0xb771f000, 4096)    = 0
+[pid  3129] ioctl(5, SIOCGIFFLAGS, {ifr_name="eth0", ifr_flags=IFF_UP|IFF_BROADCAST|IFF_RUNNING|IFF_MULTICAST}) = 0
+[pid  3129] ioctl(5, SIOCGIFHWADDR, {ifr_name="eth0", ifr_hwaddr=d8:cb:8a:3d:94:3c}) = 0
+[pid  3129] ioctl(5, SIOCGIFMETRIC, {ifr_name="eth0", ifr_metric=0}) = 0
+[pid  3129] ioctl(5, SIOCGIFMTU, {ifr_name="eth0", ifr_mtu=1500}) = 0
+[pid  3129] ioctl(5, SIOCGIFMAP, {ifr_name="eth0", ifr_map={mem_start=0, mem_end=0, base_addr=0, irq=0, dma=0, port=0}}) = 0
+[pid  3129] ioctl(5, SIOCGIFMAP, {ifr_name="eth0", ifr_map={mem_start=0, mem_end=0, base_addr=0, irq=0, dma=0, port=0}}) = 0
+[pid  3129] ioctl(5, SIOCGIFTXQLEN, {ifr_name="eth0", ifr_qlen=1000}) = 0
+[pid  3129] open("/usr/share/locale/locale.alias", O_RDONLY|O_CLOEXEC) = 6
+[pid  3129] fstat64(6, {st_mode=S_IFREG|0644, st_size=2570, ...}) = 0
+[pid  3129] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb771f000
+[pid  3129] read(6, "# Locale name alias data base.\n#"..., 4096) = 2570
+[pid  3129] read(6, "", 4096)           = 0
+[pid  3129] close(6)                    = 0
+[pid  3129] munmap(0xb771f000, 4096)    = 0
+[pid  3129] open("/usr/share/locale/en_US/LC_MESSAGES/net-tools.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  3129] open("/usr/share/locale/en/LC_MESSAGES/net-tools.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  3129] open("/usr/share/locale-langpack/en_US/LC_MESSAGES/net-tools.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  3129] open("/usr/share/locale-langpack/en/LC_MESSAGES/net-tools.mo", O_RDONLY) = -1 ENOENT (No such file or directory)
+[pid  3129] ioctl(4, SIOCGIFADDR, {ifr_name="eth0", ifr_addr={AF_INET, inet_addr("192.168.100.199")}}) = 0
+[pid  3129] ioctl(4, SIOCGIFDSTADDR, {ifr_name="eth0", ifr_dstaddr={AF_INET, inet_addr("192.168.100.199")}}) = 0
+[pid  3129] ioctl(4, SIOCGIFBRDADDR, {ifr_name="eth0", ifr_broadaddr={AF_INET, inet_addr("192.168.100.255")}}) = 0
+[pid  3129] ioctl(4, SIOCGIFNETMASK, {ifr_name="eth0", ifr_netmask={AF_INET, inet_addr("255.255.255.0")}}) = 0
+[pid  3129] fstat64(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3129] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb771f000
+[pid  3129] open("/proc/net/if_inet6", O_RDONLY) = 6
+[pid  3129] fstat64(6, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid  3129] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb771e000
+[pid  3129] read(6, "00000000000000000000000000000001"..., 1024) = 108
+[pid  3129] read(6, "", 1024)           = 0
+[pid  3129] read(6, "", 1024)           = 0
+[pid  3129] close(6)                    = 0
+[pid  3129] munmap(0xb771e000, 4096)    = 0
+[pid  3129] close(5)                    = 0
+[pid  3129] write(1, "eth0      Link encap:Ethernet  H"..., 496) = 496
+[pid  3130] <... read resumed> "eth0      Link encap:Ethernet  H"..., 32768) = 496
+[pid  3129] exit_group(0)               = ?
+[pid  3130] fstat64(1,  <unfinished ...>
+[pid  3129] +++ exited with 0 +++
+[pid  3130] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3128] <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3129
+[pid  3130] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3128] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3129, si_status=0, si_utime=0, si_stime=0} ---
+[pid  3130] <... mmap2 resumed> )       = 0xb7722000
+[pid  3128] sigreturn() (mask [] <unfinished ...>
+[pid  3130] read(0,  <unfinished ...>
+[pid  3128] <... sigreturn resumed> )   = 3129
+[pid  3130] <... read resumed> "", 32768) = 0
+[pid  3128] wait4(-1,  <unfinished ...>
+[pid  3130] write(1, "          inet addr:192.168.100."..., 79) = 79
+[pid  3131] <... read resumed> "          inet addr:192.168.100."..., 4096) = 79
+[pid  3130] close(1 <unfinished ...>
+[pid  3131] fstat64(1,  <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3131] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3130] munmap(0xb7722000, 4096 <unfinished ...>
+[pid  3131] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3130] <... munmap resumed> )      = 0
+[pid  3131] <... mmap2 resumed> )       = 0xb772b000
+[pid  3130] close(2 <unfinished ...>
+[pid  3131] read(0,  <unfinished ...>
+[pid  3130] <... close resumed> )       = 0
+[pid  3131] <... read resumed> "", 4096) = 0
+[pid  3130] exit_group(0)               = ?
+[pid  3131] _llseek(0, 0,  <unfinished ...>
+[pid  3130] +++ exited with 0 +++
+[pid  3131] <... _llseek resumed> 0xbfafc100, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+[pid  3128] <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3130
+[pid  3131] close(0 <unfinished ...>
+[pid  3128] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3130, si_status=0, si_utime=0, si_stime=0} ---
+[pid  3131] <... close resumed> )       = 0
+[pid  3128] sigreturn() (mask [] <unfinished ...>
+[pid  3131] munmap(0xb772c000, 4096 <unfinished ...>
+[pid  3128] <... sigreturn resumed> )   = 3130
+[pid  3131] <... munmap resumed> )      = 0
+[pid  3128] wait4(-1,  <unfinished ...>
+[pid  3131] write(1, "192.168.100.199  Bcast\n", 23) = 23
+[pid  3132] <... read resumed> "192.168.100.199  Bcast\n", 4096) = 23
+[pid  3131] close(1 <unfinished ...>
+[pid  3132] fstat64(1,  <unfinished ...>
+[pid  3131] <... close resumed> )       = 0
+[pid  3132] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3131] munmap(0xb772b000, 4096 <unfinished ...>
+[pid  3132] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3131] <... munmap resumed> )      = 0
+[pid  3132] <... mmap2 resumed> )       = 0xb76ed000
+[pid  3131] close(2 <unfinished ...>
+[pid  3132] read(0,  <unfinished ...>
+[pid  3131] <... close resumed> )       = 0
+[pid  3132] <... read resumed> "", 4096) = 0
+[pid  3131] exit_group(0)               = ?
+[pid  3132] _llseek(0, 0,  <unfinished ...>
+[pid  3131] +++ exited with 0 +++
+[pid  3132] <... _llseek resumed> 0xbfde1b90, SEEK_CUR) = -1 ESPIPE (Illegal seek)
+[pid  3128] <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3131
+[pid  3132] close(0 <unfinished ...>
+[pid  3128] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3131, si_status=0, si_utime=0, si_stime=0} ---
+[pid  3132] <... close resumed> )       = 0
+[pid  3128] sigreturn() (mask [] <unfinished ...>
+[pid  3132] munmap(0xb76ee000, 4096 <unfinished ...>
+[pid  3128] <... sigreturn resumed> )   = 3131
+[pid  3132] <... munmap resumed> )      = 0
+[pid  3128] wait4(-1,  <unfinished ...>
+[pid  3132] write(1, "192.168.100.199\n", 16) = 16
+[pid  3127] <... read resumed> "192.168.100.199\n", 4096) = 16
+[pid  3132] close(1 <unfinished ...>
+[pid  3127] fstat64(1,  <unfinished ...>
+[pid  3132] <... close resumed> )       = 0
+[pid  3127] <... fstat64 resumed> {st_mode=S_IFREG|0664, st_size=39487, ...}) = 0
+[pid  3132] munmap(0xb76ed000, 4096 <unfinished ...>
+[pid  3127] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0 <unfinished ...>
+[pid  3132] <... munmap resumed> )      = 0
+[pid  3127] <... mmap2 resumed> )       = 0xb76f0000
+[pid  3132] close(2 <unfinished ...>
+[pid  3127] read(3,  <unfinished ...>
+[pid  3132] <... close resumed> )       = 0
+[pid  3132] exit_group(0)               = ?
+[pid  3132] +++ exited with 0 +++
+[pid  3128] <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3132
+[pid  3128] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3132, si_status=0, si_utime=0, si_stime=0} ---
+[pid  3128] sigreturn() (mask [])       = 3132
+[pid  3128] exit_group(0)               = ?
+[pid  3127] <... read resumed> "", 4096) = 0
+[pid  3128] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3128, si_status=0, si_utime=0, si_stime=0} ---
+write(1, "buf: 192.168.100.199\n", 21buf: 192.168.100.199
+)  = 21
+exit_group(0)                           = ?
++++ exited with 0 +++

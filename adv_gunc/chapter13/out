@@ -1,0 +1,158 @@
+execve("./popen1", ["./popen1"], [/* 21 vars */]) = 0
+brk(0)                                  = 0x84f3000
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77bd000
+access("/etc/ld.so.preload", R_OK)      = -1 ENOENT (No such file or directory)
+open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+fstat64(3, {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb77b7000
+close(3)                                = 0
+access("/etc/ld.so.nohwcap", F_OK)      = -1 ENOENT (No such file or directory)
+open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb7609000
+mmap2(0xb77b1000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb77b1000
+mmap2(0xb77b4000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb77b4000
+close(3)                                = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7608000
+set_thread_area({entry_number:-1 -> 6, base_addr:0xb7608940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+mprotect(0xb77b1000, 8192, PROT_READ)   = 0
+mprotect(0x8049000, 4096, PROT_READ)    = 0
+mprotect(0xb77e2000, 4096, PROT_READ)   = 0
+munmap(0xb77b7000, 20494)               = 0
+brk(0)                                  = 0x84f3000
+brk(0x8514000)                          = 0x8514000
+pipe2([3, 4], O_CLOEXEC)                = 0
+clone(Process 3223 attached
+child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb76089a8) = 3223
+[pid  3223] close(3 <unfinished ...>
+[pid  3222] close(4 <unfinished ...>
+[pid  3223] <... close resumed> )       = 0
+[pid  3222] <... close resumed> )       = 0
+[pid  3223] dup2(4, 1 <unfinished ...>
+[pid  3222] fcntl64(3, F_SETFD, 0 <unfinished ...>
+[pid  3223] <... dup2 resumed> )        = 1
+[pid  3222] <... fcntl64 resumed> )     = 0
+[pid  3223] close(4 <unfinished ...>
+[pid  3222] fstat64(3,  <unfinished ...>
+[pid  3223] <... close resumed> )       = 0
+[pid  3222] <... fstat64 resumed> {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3223] execve("/bin/sh", ["sh", "-c", "uname -a"], [/* 21 vars */] <unfinished ...>
+[pid  3222] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77bc000
+[pid  3223] <... execve resumed> )      = 0
+[pid  3222] read(3,  <unfinished ...>
+[pid  3223] brk(0)                      = 0xb8df8000
+[pid  3223] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3223] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7792000
+[pid  3223] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid  3223] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid  3223] fstat64(3, {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3223] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb778c000
+[pid  3223] close(3)                    = 0
+[pid  3223] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3223] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid  3223] read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3223] fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3223] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75de000
+[pid  3223] mmap2(0xb7786000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb7786000
+[pid  3223] mmap2(0xb7789000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7789000
+[pid  3223] close(3)                    = 0
+[pid  3223] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75dd000
+[pid  3223] set_thread_area({entry_number:-1 -> 6, base_addr:0xb75dd940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3223] mprotect(0xb7786000, 8192, PROT_READ) = 0
+[pid  3223] mprotect(0xb77d4000, 4096, PROT_READ) = 0
+[pid  3223] mprotect(0xb77b7000, 4096, PROT_READ) = 0
+[pid  3223] munmap(0xb778c000, 20494)   = 0
+[pid  3223] getpid()                    = 3223
+[pid  3223] rt_sigaction(SIGCHLD, {0xb77c9ca0, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3223] geteuid32()                 = 1000
+[pid  3223] brk(0)                      = 0xb8df8000
+[pid  3223] brk(0xb8e19000)             = 0xb8e19000
+[pid  3223] getppid()                   = 3222
+[pid  3223] stat64("/home/amigok/rpi/code/embedded_class/adv_gunc/chapter13", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid  3223] stat64(".", {st_mode=S_IFDIR|0775, st_size=4096, ...}) = 0
+[pid  3223] rt_sigaction(SIGINT, NULL, {SIG_DFL, [], 0}, 8) = 0
+[pid  3223] rt_sigaction(SIGINT, {0xb77c9ca0, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3223] rt_sigaction(SIGQUIT, NULL, {SIG_DFL, [], 0}, 8) = 0
+[pid  3223] rt_sigaction(SIGQUIT, {SIG_DFL, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3223] rt_sigaction(SIGTERM, NULL, {SIG_DFL, [], 0}, 8) = 0
+[pid  3223] rt_sigaction(SIGTERM, {SIG_DFL, ~[RTMIN RT_1], 0}, NULL, 8) = 0
+[pid  3223] stat64("/usr/local/sbin/uname", 0xbff6d120) = -1 ENOENT (No such file or directory)
+[pid  3223] stat64("/usr/local/bin/uname", 0xbff6d120) = -1 ENOENT (No such file or directory)
+[pid  3223] stat64("/usr/sbin/uname", 0xbff6d120) = -1 ENOENT (No such file or directory)
+[pid  3223] stat64("/usr/bin/uname", 0xbff6d120) = -1 ENOENT (No such file or directory)
+[pid  3223] stat64("/sbin/uname", 0xbff6d120) = -1 ENOENT (No such file or directory)
+[pid  3223] stat64("/bin/uname", {st_mode=S_IFREG|0755, st_size=26312, ...}) = 0
+[pid  3223] clone(Process 3224 attached
+child_stack=0, flags=CLONE_CHILD_CLEARTID|CLONE_CHILD_SETTID|SIGCHLD, child_tidptr=0xb75dd9a8) = 3224
+[pid  3223] wait4(-1,  <unfinished ...>
+[pid  3224] execve("/bin/uname", ["uname", "-a"], [/* 21 vars */]) = 0
+[pid  3224] brk(0)                      = 0x9be3000
+[pid  3224] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3224] mmap2(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7772000
+[pid  3224] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+[pid  3224] open("/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+[pid  3224] fstat64(3, {st_mode=S_IFREG|0644, st_size=20494, ...}) = 0
+[pid  3224] mmap2(NULL, 20494, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb776c000
+[pid  3224] close(3)                    = 0
+[pid  3224] access("/etc/ld.so.nohwcap", F_OK) = -1 ENOENT (No such file or directory)
+[pid  3224] open("/lib/i386-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+[pid  3224] read(3, "\177ELF\1\1\1\0\0\0\0\0\0\0\0\0\3\0\3\0\1\0\0\0\340\233\1\0004\0\0\0"..., 512) = 512
+[pid  3224] fstat64(3, {st_mode=S_IFREG|0755, st_size=1754876, ...}) = 0
+[pid  3224] mmap2(NULL, 1759868, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0xb75be000
+[pid  3224] mmap2(0xb7766000, 12288, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1a8000) = 0xb7766000
+[pid  3224] mmap2(0xb7769000, 10876, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0xb7769000
+[pid  3224] close(3)                    = 0
+[pid  3224] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb75bd000
+[pid  3224] set_thread_area({entry_number:-1 -> 6, base_addr:0xb75bd940, limit:1048575, seg_32bit:1, contents:0, read_exec_only:0, limit_in_pages:1, seg_not_present:0, useable:1}) = 0
+[pid  3224] mprotect(0xb7766000, 8192, PROT_READ) = 0
+[pid  3224] mprotect(0x804e000, 4096, PROT_READ) = 0
+[pid  3224] mprotect(0xb7797000, 4096, PROT_READ) = 0
+[pid  3224] munmap(0xb776c000, 20494)   = 0
+[pid  3224] brk(0)                      = 0x9be3000
+[pid  3224] brk(0x9c04000)              = 0x9c04000
+[pid  3224] open("/usr/lib/locale/locale-archive", O_RDONLY|O_LARGEFILE|O_CLOEXEC) = 3
+[pid  3224] fstat64(3, {st_mode=S_IFREG|0644, st_size=1607664, ...}) = 0
+[pid  3224] mmap2(NULL, 1607664, PROT_READ, MAP_PRIVATE, 3, 0) = 0xb7434000
+[pid  3224] close(3)                    = 0
+[pid  3224] uname({sys="Linux", node="ubuntu-server1404-amigok", ...}) = 0
+[pid  3224] fstat64(1, {st_mode=S_IFIFO|0600, st_size=0, ...}) = 0
+[pid  3224] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7771000
+[pid  3224] uname({sys="Linux", node="ubuntu-server1404-amigok", ...}) = 0
+[pid  3224] open("/proc/cpuinfo", O_RDONLY|O_LARGEFILE) = 3
+[pid  3224] fstat64(3, {st_mode=S_IFREG|0444, st_size=0, ...}) = 0
+[pid  3224] mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb7770000
+[pid  3224] read(3, "processor\t: 0\nvendor_id\t: Authen"..., 1024) = 1024
+[pid  3224] _llseek(3, 0, [1024], SEEK_CUR) = 0
+[pid  3224] _llseek(3, -985, [39], SEEK_CUR) = 0
+[pid  3224] close(3)                    = 0
+[pid  3224] munmap(0xb7770000, 4096)    = 0
+[pid  3224] uname({sys="Linux", node="ubuntu-server1404-amigok", ...}) = 0
+[pid  3224] write(1, "Linux ubuntu-server1404-amigok 3"..., 128) = 128
+[pid  3222] <... read resumed> "Linux ubuntu-server1404-amigok 3"..., 4096) = 128
+[pid  3224] close(1 <unfinished ...>
+[pid  3222] read(3,  <unfinished ...>
+[pid  3224] <... close resumed> )       = 0
+[pid  3224] munmap(0xb7771000, 4096)    = 0
+[pid  3224] close(2)                    = 0
+[pid  3224] exit_group(0)               = ?
+[pid  3224] +++ exited with 0 +++
+[pid  3223] <... wait4 resumed> [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0, NULL) = 3224
+[pid  3223] --- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3224, si_status=0, si_utime=0, si_stime=0} ---
+[pid  3223] sigreturn() (mask [])       = 3224
+[pid  3223] exit_group(0)               = ?
+[pid  3222] <... read resumed> "", 4096) = 0
+[pid  3223] +++ exited with 0 +++
+--- SIGCHLD {si_signo=SIGCHLD, si_code=CLD_EXITED, si_pid=3223, si_status=0, si_utime=0, si_stime=0} ---
+fstat64(1, {st_mode=S_IFREG|0664, st_size=10232, ...}) = 0
+mmap2(NULL, 4096, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0xb77bb000
+close(3)                                = 0
+waitpid(3223, [{WIFEXITED(s) && WEXITSTATUS(s) == 0}], 0) = 3223
+munmap(0xb77bc000, 4096)                = 0
+write(1, "Output was:-\nLinux ubuntu-server"..., 142Output was:-
+Linux ubuntu-server1404-amigok 3.16.0-31-generic #43~14.04.1-Ubuntu SMP Tue Mar 10 20:14:11 UTC 2015 i686 athlon i686 GNU/Linux
+
+) = 142
+exit_group(0)                           = ?
++++ exited with 0 +++
